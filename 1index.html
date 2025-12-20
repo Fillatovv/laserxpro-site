@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LaserX Pro — Laser Metal Cleaning (Tampa & Beyond)</title>
+  <meta name="description" content="Laser metal cleaning in Tampa & beyond. Rust, paint, oxidation removal with no chemicals and minimal dust. Mobile service available." />
+  <style>
+    :root{
+      --bg:#0b0d10;
+      --card:#11151b;
+      --text:#e9eef6;
+      --muted:#aab4c3;
+      --line:#1d2633;
+      --accent:#7cf7c5;
+      --accent2:#66a3ff;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(102,163,255,.18), transparent 60%),
+                  radial-gradient(900px 500px at 80% 10%, rgba(124,247,197,.14), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{display:flex; gap:10px; align-items:center; font-weight:700; letter-spacing:.3px}
+    .logo{
+      width:38px;height:38px;border-radius:12px;
+      background: linear-gradient(135deg, rgba(124,247,197,.9), rgba(102,163,255,.9));
+      box-shadow: var(--shadow);
+    }
+    .navlinks{display:flex; gap:18px; color:var(--muted); font-size:14px}
+    .navlinks a:hover{color:var(--text)}
+    .hero{
+      margin-top:10px;
+      display:grid; gap:18px;
+      grid-template-columns: 1.2fr .8fr;
+      align-items:stretch;
+    }
+    .card{
+      background: rgba(17,21,27,.78);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:22px;
+      backdrop-filter: blur(8px);
+    }
+    h1{margin:0 0 10px; font-size:44px; line-height:1.05}
+    .sub{color:var(--muted); font-size:16px; line-height:1.6}
+    .badges{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+    .badge{
+      border:1px solid var(--line);
+      padding:8px 10px; border-radius:999px;
+      color:var(--muted); font-size:13px;
+      background: rgba(0,0,0,.15);
+    }
+    .cta{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px; border-radius: 14px;
+      border:1px solid var(--line);
+      font-weight:650; font-size:14px;
+      background: rgba(0,0,0,.2);
+    }
+    .btn.primary{
+      border: none;
+      background: linear-gradient(135deg, rgba(124,247,197,.95), rgba(102,163,255,.95));
+      color:#071017;
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .grid3{display:grid; gap:14px; grid-template-columns: repeat(3, 1fr); margin-top:14px}
+    .k{font-weight:700}
+    .muted{color:var(--muted)}
+    .section{margin-top:22px}
+    .section h2{margin:0 0 10px; font-size:22px}
+    .services{display:grid; gap:14px; grid-template-columns: repeat(3, 1fr)}
+    .service h3{margin:0 0 8px; font-size:16px}
+    .service p{margin:0; color:var(--muted); font-size:14px; line-height:1.5}
+    .steps{display:grid; gap:14px; grid-template-columns: repeat(3,1fr)}
+    .stepnum{
+      width:34px;height:34px;border-radius:12px;
+      display:flex;align-items:center;justify-content:center;
+      background: rgba(102,163,255,.12); border:1px solid var(--line);
+      color: var(--text); font-weight:700;
+      margin-bottom:10px;
+    }
+    .faq details{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px 14px;
+      background: rgba(0,0,0,.12);
+    }
+    .faq summary{cursor:pointer; font-weight:650}
+    .faq p{color:var(--muted); margin:10px 0 0; line-height:1.55}
+    form{display:grid; gap:10px}
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.22);
+      color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:110px; resize:vertical}
+    .foot{
+      margin-top:22px;
+      display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between;
+      color:var(--muted); font-size:13px;
+      border-top:1px solid var(--line);
+      padding-top:16px;
+    }
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      h1{font-size:36px}
+      .grid3,.services,.steps{grid-template-columns:1fr}
+      .navlinks{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>LaserX Pro</div>
+      </div>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="card">
+        <h1>Laser Metal Cleaning<br/>Tampa & Beyond</h1>
+        <div class="sub">
+          Remove rust, paint, oxidation and carbon buildup with a clean laser process —
+          <span class="k">no chemicals</span>, <span class="k">no sand</span>, minimal dust.
+          Safe for indoor work. Mobile service available.
+        </div>
+
+        <div class="badges">
+          <div class="badge">No chemicals</div>
+          <div class="badge">No sandblasting</div>
+          <div class="badge">Minimal dust / no mess</div>
+          <div class="badge">Auto + Industrial</div>
+          <div class="badge">Mobile service</div>
+        </div>
+
+        <div class="cta">
+          <a class="btn primary" href="#contact">Get a Quote</a>
+          <a class="btn" href="tel:+17276331826">Call: (727) 633-1826</a>
+        </div>
+
+        <div class="grid3">
+          <div class="card" style="padding:14px">
+            <div class="k">Fast turnaround</div>
+            <div class="muted">Accurate cleaning, even on complex shapes.</div>
+          </div>
+          <div class="card" style="padding:14px">
+            <div class="k">Indoor-safe</div>
+            <div class="muted">Clean process — ideal for garages & shops.</div>
+          </div>
+          <div class="card" style="padding:14px">
+            <div class="k">Mobile service</div>
+            <div class="muted">We come to you around Tampa and beyond.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 style="margin:0 0 10px">Quick Quote</h2>
+        <div class="muted" style="margin-bottom:12px">
+          Send photos + what you need cleaned. We’ll reply with price & timing.
+        </div>
+
+        <!-- Replace action="" with your form endpoint (Formspree / Netlify forms) -->
+        <form id="quoteForm" action="" method="POST">
+          <input name="name" placeholder="Your name" required />
+          <input name="phone" placeholder="Phone" required />
+          <input name="item" placeholder="What needs cleaning? (wheels, frame, parts…)" />
+          <textarea name="details" placeholder="Details: rust/paint, size, deadline, location…"></textarea>
+          <button class="btn primary" type="submit">Request Quote</button>
+          <div class="muted" style="font-size:12px">
+            Email: <a href="mailto:laserxpro25@gmail.com">laserxpro25@gmail.com</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="services" class="section card">
+      <h2>Services</h2>
+      <div class="services">
+        <div class="service card">
+          <h3>Rust Removal</h3>
+          <p>Cleanly remove rust from steel parts, frames, tools, and equipment.</p>
+        </div>
+        <div class="service card">
+          <h3>Paint & Coating Removal</h3>
+          <p>Strip paint and coatings with precision — great for restorations.</p>
+        </div>
+        <div class="service card">
+          <h3>Wheels & Auto Parts</h3>
+          <p>Wheels, brackets, hardware, engine bay parts — any complexity.</p>
+        </div>
+        <div class="service card">
+          <h3>Industrial Equipment</h3>
+          <p>Remove oxidation and buildup from equipment and metal surfaces.</p>
+        </div>
+        <div class="service card">
+          <h3>Prep for Welding/Paint</h3>
+          <p>Perfect surface prep without harsh abrasives or chemicals.</p>
+        </div>
+        <div class="service card">
+          <h3>Mobile On-Site Service</h3>
+          <p>We can come to your shop/garage around Tampa and beyond.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="process" class="section card">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="card">
+          <div class="stepnum">1</div>
+          <div class="k">Send photos</div>
+          <div class="muted">Text or email photos/videos and describe the job.</div>
+        </div>
+        <div class="card">
+          <div class="stepnum">2</div>
+          <div class="k">Get a quote</div>
+          <div class="muted">We estimate price and turnaround time.</div>
+        </div>
+        <div class="card">
+          <div class="stepnum">3</div>
+          <div class="k">We clean it</div>
+          <div class="muted">On-site or drop-off — clean result, no mess.</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="faq" class="section card">
+      <h2>FAQ</h2>
+      <div class="faq" style="display:grid; gap:10px">
+        <details>
+          <summary>Is it messy? Will there be dust?</summary>
+          <p>Compared to sandblasting, the process is very clean. No sand, no chemicals, minimal dust. Great for indoor work.</p>
+        </details>
+        <details>
+          <summary>Can you clean aluminum wheels?</summary>
+          <p>Yes — with correct settings. We choose parameters to protect the metal and get a clean finish.</p>
+        </details>
+        <details>
+          <summary>How do you price jobs?</summary>
+          <p>Depends on size, layers (paint/rust), complexity, and location. Send photos and we’ll give you a quote.</p>
+        </details>
+        <details>
+          <summary>Where do you work?</summary>
+          <p>Tampa and beyond — mobile service available across the area.</p>
+        </details>
+      </div>
+    </div>
+
+    <div id="contact" class="section card">
+      <h2>Contact</h2>
+      <div class="grid3">
+        <div class="card">
+          <div class="k">Phone</div>
+          <div class="muted"><a href="tel:+17276331826">(727) 633-1826</a></div>
+        </div>
+        <div class="card">
+          <div class="k">Email</div>
+          <div class="muted"><a href="mailto:laserxpro25@gmail.com">laserxpro25@gmail.com</a></div>
+        </div>
+        <div class="card">
+          <div class="k">Service area</div>
+          <div class="muted">Tampa, FL — and beyond (mobile service)</div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <div>© <span id="y"></span> LaserX Pro</div>
+        <div class="muted">Laser metal cleaning • Rust / paint / oxidation removal</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Simple fallback if form endpoint isn't set:
+    document.getElementById("quoteForm").addEventListener("submit", function(e){
+      const action = this.getAttribute("action");
+      if(!action){
+        e.preventDefault();
+        alert("Form is not connected yet. For now, please call (727) 633-1826 or email laserxpro25@gmail.com");
+      }
+    });
+  </script>
+</body>
+</html>
