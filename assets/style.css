@@ -8,10 +8,10 @@ body{
 }
 
 .logo {
-  max-width: 350px;
-  width: 100%;
+  width: 300px !important;
+  max-width: 300px !important;
   display: block;
-  margin: 0 auto 20px auto;
+  margin: 40px auto;
 }
 
 .container{
