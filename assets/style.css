@@ -8,8 +8,8 @@ body{
 }
 
 .logo {
-  width: 300px !important;
-  max-width: 300px !important;
+  width: 300px 
+  max-width: 300px 
   display: block;
   margin: 40px auto;
 }
