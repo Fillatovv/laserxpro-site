@@ -3,517 +3,114 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LaserX Pro — Laser Metal Cleaning (Tampa & beyond)</title>
-  <meta name="description" content="LaserX Pro — mobile laser metal cleaning in Tampa, FL and beyond. Rust, paint, oxidation removal. No dust, no chemicals. Wheels, frames, equipment, auto parts." />
-  <meta name="theme-color" content="#0b0f1a" />
-
-  <!-- Favicon (place favicon.png in repo root) -->
-  <link rel="icon" href="favicon.png" type="image/png" />
-  <link rel="apple-touch-icon" href="favicon.png" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="LaserX Pro — Laser Metal Cleaning" />
-  <meta property="og:description" content="Fast, clean, precise laser metal cleaning. No dust • No chemicals • Mobile service." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://laserxpro.com/favicon.png" />
-
-  <style>
-    :root{
-      --bg:#070a12;
-      --bg2:#0b1020;
-      --card:#0c1328cc;
-      --stroke:#1a2446;
-      --text:#eaf0ff;
-      --muted:#a8b4d6;
-      --brand:#7c5cff;
-      --brand2:#00e5ff;
-      --good:#33f5a2;
-      --shadow: 0 18px 60px rgba(0,0,0,.55);
-      --radius: 20px;
-      --radius2: 28px;
-      --max: 1120px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      color:var(--text);
-      background:
-        radial-gradient(900px 500px at 20% 10%, rgba(124,92,255,.22), transparent 60%),
-        radial-gradient(800px 520px at 90% 20%, rgba(0,229,255,.16), transparent 55%),
-        radial-gradient(900px 650px at 40% 110%, rgba(51,245,162,.10), transparent 55%),
-        linear-gradient(180deg, var(--bg), var(--bg2));
-      overflow-x:hidden;
-    }
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
-    .nav{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(14px);
-      background: rgba(7,10,18,.55);
-      border-bottom: 1px solid rgba(26,36,70,.45);
-    }
-    .nav-inner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0;
-      gap:14px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      min-width: 220px;
-    }
-    .logo{
-      width:54px; height:54px; flex:0 0 54px;
-      border-radius:16px;
-      box-shadow: 0 0 0 1px rgba(26,36,70,.8), 0 18px 40px rgba(0,0,0,.45);
-      overflow:hidden;
-      background: transparent;
-      display:grid; place-items:center;
-    }
-    .logo img{width:100%;height:100%;object-fit:cover;border-radius:16px}
-    .brand-title{line-height:1.05}
-    .brand-title b{display:block; font-size:14px; letter-spacing:.4px}
-    .brand-title span{display:block; font-size:12px; color:var(--muted)}
-    .nav-links{
-      display:flex; gap:18px; align-items:center;
-      color:var(--muted);
-      font-size:13px;
-    }
-    .nav-links a{padding:8px 10px; border-radius:12px; transition:.2s}
-    .nav-links a:hover{background: rgba(26,36,70,.35); color:var(--text)}
-    .nav-cta{
-      display:flex; gap:10px; align-items:center; justify-content:flex-end;
-      min-width: 260px;
-    }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:10px 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(26,36,70,.75);
-      background: rgba(12,19,40,.6);
-      color: var(--text);
-      font-size:13px;
-      cursor:pointer;
-      transition: .2s transform, .2s background;
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
-      white-space:nowrap;
-    }
-    .btn:hover{transform: translateY(-1px); background: rgba(12,19,40,.8)}
-    .btn.primary{
-      border-color: transparent;
-      background: linear-gradient(135deg, rgba(124,92,255,1), rgba(0,229,255,.95));
-      color:#06101a;
-      font-weight:700;
-    }
-    .btn.primary:hover{filter:saturate(1.1) brightness(1.03)}
-    .pill{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(26,36,70,.8);
-      background: rgba(12,19,40,.55);
-      color: var(--muted);
-      font-size:12px;
-    }
-    .dot{
-      width:10px; height:10px; border-radius:50%;
-      background: radial-gradient(circle at 30% 30%, var(--brand2), var(--brand));
-      box-shadow: 0 0 20px rgba(0,229,255,.25);
-    }
-
-    .hero{padding: 56px 0 26px;}
-    .hero-grid{display:grid; grid-template-columns: 1.1fr .9fr; gap: 22px; align-items: stretch;}
-    .h1{font-size: clamp(34px, 4vw, 56px); line-height: 1.02; margin: 14px 0 10px; letter-spacing: -0.5px;}
-    .lead{color: var(--muted); font-size: 16px; line-height: 1.6; margin: 0 0 18px; max-width: 56ch;}
-    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin: 18px 0 16px;}
-    .hero-stats{display:flex; gap:10px; flex-wrap:wrap; margin-top: 18px;}
-    .stat{
-      flex: 1 1 180px;
-      padding: 14px 14px;
-      border-radius: var(--radius);
-      border: 1px solid rgba(26,36,70,.75);
-      background: rgba(12,19,40,.45);
-    }
-    .stat b{display:block; font-size:18px}
-    .stat span{display:block; color: var(--muted); font-size:12px; margin-top:2px}
-
-    .panel{
-      border-radius: var(--radius2);
-      border: 1px solid rgba(26,36,70,.75);
-      background: linear-gradient(180deg, rgba(12,19,40,.55), rgba(12,19,40,.35));
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      position:relative;
-    }
-    .panel::before{
-      content:"";
-      position:absolute; inset:-2px;
-      background:
-        radial-gradient(600px 220px at 30% 0%, rgba(124,92,255,.22), transparent 60%),
-        radial-gradient(520px 240px at 90% 20%, rgba(0,229,255,.16), transparent 60%);
-      pointer-events:none;
-    }
-    .panel-inner{position:relative; padding:18px}
-    .mock{
-      aspect-ratio: 4 / 3;
-      border-radius: 18px;
-      border: 1px solid rgba(26,36,70,.7);
-      background:
-        radial-gradient(140px 140px at 20% 30%, rgba(0,229,255,.25), transparent 60%),
-        radial-gradient(160px 160px at 75% 25%, rgba(124,92,255,.22), transparent 55%),
-        linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,0));
-      display:grid;
-      place-items:center;
-      overflow:hidden;
-    }
-    .mock .big-logo{
-      width: 78%;
-      border-radius: 18px;
-      box-shadow: 0 18px 60px rgba(0,0,0,.45);
-      outline: 1px solid rgba(26,36,70,.8);
-    }
-    .card-row{display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px;}
-    .mini{border-radius: 16px; border: 1px solid rgba(26,36,70,.75); background: rgba(7,10,18,.35); padding: 12px 12px;}
-    .mini b{font-size:13px}
-    .mini p{margin:6px 0 0; color:var(--muted); font-size:12px; line-height:1.4}
-
-    .section{padding: 42px 0}
-    .section h2{margin:0 0 10px; font-size: 26px; letter-spacing: -0.2px;}
-    .section p.sub{margin:0 0 18px; color: var(--muted); line-height:1.6; max-width: 74ch;}
-    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px;}
-    .svc{
-      padding: 16px;
-      border-radius: var(--radius);
-      border: 1px solid rgba(26,36,70,.75);
-      background: rgba(12,19,40,.40);
-      box-shadow: 0 10px 30px rgba(0,0,0,.25);
-      position:relative;
-      overflow:hidden;
-    }
-    .svc::after{
-      content:"";
-      position:absolute; inset:-1px;
-      background: radial-gradient(240px 160px at 15% 0%, rgba(0,229,255,.14), transparent 60%);
-      pointer-events:none;
-    }
-    .svc .ico{
-      width:38px; height:38px; border-radius: 14px;
-      display:grid; place-items:center;
-      background: rgba(7,10,18,.35);
-      border: 1px solid rgba(26,36,70,.75);
-      margin-bottom: 10px;
-    }
-    .svc h3{margin:0 0 6px; font-size:16px}
-    .svc p{margin:0; color:var(--muted); font-size:13px; line-height:1.55}
-    .tag{
-      display:inline-flex; align-items:center; gap:8px;
-      margin-top: 10px;
-      color: rgba(234,240,255,.92);
-      font-size: 12px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(26,36,70,.8);
-      background: rgba(7,10,18,.25);
-    }
-
-    .two-col{display:grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: stretch;}
-    .steps{padding: 16px; border-radius: var(--radius); border: 1px solid rgba(26,36,70,.75); background: rgba(12,19,40,.40);}
-    .steps ol{margin:0; padding-left: 18px; color:var(--muted); line-height:1.65}
-    .steps li{margin: 8px 0}
-    .beforeafter{padding: 16px; border-radius: var(--radius); border: 1px solid rgba(26,36,70,.75); background: rgba(12,19,40,.40); overflow:hidden;}
-    .ba-grid{display:grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;}
-    .ph{
-      border-radius: 16px;
-      border: 1px dashed rgba(168,180,214,.35);
-      background: rgba(7,10,18,.25);
-      aspect-ratio: 4/3;
-      display:grid; place-items:center;
-      color: rgba(168,180,214,.85);
-      font-size: 12px;
-      text-align:center;
-      padding: 10px;
-    }
-
-    .contact{padding: 16px; border-radius: var(--radius); border: 1px solid rgba(26,36,70,.75); background: rgba(12,19,40,.40);}
-    .contact-grid{display:grid; grid-template-columns: 1.1fr .9fr; gap: 14px;}
-    .form{display:grid; gap: 10px;}
-    .field{display:grid; gap:6px;}
-    label{font-size:12px; color: var(--muted)}
-    input, textarea{
-      width:100%;
-      padding: 12px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(26,36,70,.75);
-      background: rgba(7,10,18,.35);
-      color: var(--text);
-      outline:none;
-    }
-    textarea{min-height: 110px; resize: vertical}
-    input:focus, textarea:focus{border-color: rgba(0,229,255,.55)}
-    .contact-info{
-      border-radius: 16px;
-      border: 1px solid rgba(26,36,70,.75);
-      background: rgba(7,10,18,.25);
-      padding: 14px;
-    }
-    .contact-info b{display:block; font-size:14px}
-    .contact-info p{margin:8px 0 0; color:var(--muted); line-height:1.55; font-size:13px}
-    .list{margin: 12px 0 0; padding:0; list-style:none; display:grid; gap:10px; color: var(--muted); font-size:13px;}
-    .list li{display:flex; gap:10px; align-items:flex-start}
-    .k{
-      flex:0 0 auto;
-      width:26px; height:26px; border-radius: 10px;
-      display:grid; place-items:center;
-      border: 1px solid rgba(26,36,70,.75);
-      background: rgba(12,19,40,.5);
-      color: rgba(234,240,255,.9);
-      font-size: 12px;
-    }
-
-    footer{
-      padding: 30px 0 40px;
-      color: rgba(168,180,214,.9);
-      font-size: 12px;
-      border-top: 1px solid rgba(26,36,70,.45);
-      margin-top: 34px;
-    }
-    .foot{display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap;}
-    .small{color: rgba(168,180,214,.75)}
-    .sep{opacity:.35; margin: 0 8px}
-
-    @media (max-width: 980px){
-      .hero-grid{grid-template-columns: 1fr; }
-      .nav-cta{min-width:auto}
-      .grid-3{grid-template-columns: 1fr}
-      .two-col{grid-template-columns: 1fr}
-      .contact-grid{grid-template-columns: 1fr}
-      .nav-links{display:none}
-      .card-row{grid-template-columns: 1fr}
-    }
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"LaserX Pro",
-    "areaServed":"Tampa, FL and beyond",
-    "description":"Mobile laser metal cleaning: rust, paint, oxidation removal. No dust, no chemicals. Wheels, frames, equipment, auto parts.",
-    "telephone":"+1-727-633-1826",
-    "email":"laserxpro25@gmail.com",
-    "url":"https://laserxpro.com"
-  }
-  </script>
+  <title>LaserXPro — Mobile Laser Cleaning (Tampa Bay)</title>
+  <meta name="description" content="Mobile laser cleaning in Tampa Bay. Rust, paint, grease removal for cars, equipment, brick, industrial surfaces. Call/Text for a fast quote." />
+  <link rel="stylesheet" href="/assets/style.css" />
 </head>
-
 <body>
-  <header class="nav">
-    <div class="wrap nav-inner">
-      <div class="brand">
-        <div class="logo" aria-label="LaserX Pro logo">
-          <img alt="LaserX Pro" src="logo.png" />
-        </div>
-        <div class="brand-title">
-          <b>LaserX Pro</b>
-          <span>Laser Metal Cleaning • Mobile</span>
-        </div>
-      </div>
+  <header class="top">
+    <div class="container topbar">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <b>LaserXPro</b>
+          <small>Mobile Laser Cleaning • Tampa Bay, FL</small>
+        </span>
+      </a>
 
-      <nav class="nav-links" aria-label="Navigation">
-        <a href="#services">Services</a>
-        <a href="#process">How it works</a>
-        <a href="#gallery">Before/After</a>
-        <a href="#contact">Contact</a>
+      <nav class="nav">
+        <a href="/gallery/">Gallery</a>
+        <a href="#quote">Get Quote</a>
       </nav>
 
-      <div class="nav-cta">
-        <a class="btn" href="tel:+17276331826">Call: 727-633-1826</a>
-        <a class="btn primary" href="#contact">Get a quote</a>
+      <div class="actions">
+        <a class="btn primary" href="tel:+17276331826">Call: (727) 633-1826</a>
+        <a class="btn" href="sms:+17276331826">Text</a>
       </div>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="pill"><span class="dot"></span> No chemicals • No dust • Safe for indoor work</div>
-          <h1 class="h1">Laser metal cleaning that looks <span style="background:linear-gradient(135deg,var(--brand),var(--brand2)); -webkit-background-clip:text; background-clip:text; color:transparent;">factory-fresh</span>.</h1>
-          <p class="lead">
-            Rust, paint, oxidation, carbon — removed with precision. Perfect for wheels, frames, equipment, auto parts.
-            <b>We come to you</b> — Tampa, FL and beyond.
-          </p>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Rust. Paint. Grease — removed fast.</h1>
+          <p class="lead">Cars • Industrial equipment • Brick • Metal surfaces. Clean results, minimal mess. We come to you.</p>
 
-          <div class="hero-actions">
-            <a class="btn primary" href="sms:+17276331826?&body=Hi%20LaserX%20Pro!%20I%20need%20a%20quote%20for%20laser%20cleaning.%20My%20item%3A%20_____%20Location%3A%20_____%20Photos%3A%20_____%0A">Text for a quote</a>
-            <a class="btn" href="mailto:laserxpro25@gmail.com?subject=Quote%20request%20-%20LaserX%20Pro&body=Hi%20LaserX%20Pro%2C%0A%0AI%20need%20a%20quote%20for%3A%20_____%0ALocation%3A%20_____%0ATimeline%3A%20_____%0APhotos%20link%3A%20_____%0A%0AThank%20you!">Email</a>
-            <a class="btn" href="#services">See services</a>
+          <div class="hero-cta">
+            <a class="btn primary" href="tel:+17276331826">Call now</a>
+            <a class="btn" href="#quote">Get a quote</a>
+            <a class="btn ghost" href="/gallery/">See real work</a>
           </div>
 
-          <div class="hero-stats">
-            <div class="stat"><b>Clean, controlled</b><span>No sand, no blasting media, minimal mess</span></div>
-            <div class="stat"><b>Mobile service</b><span>We work on-site — shop, garage, warehouse</span></div>
-            <div class="stat"><b>Detail-level finish</b><span>Great for parts prep before paint/coating</span></div>
+          <div class="badges">
+            <span class="badge">Mobile service</span>
+            <span class="badge">Precision cleaning</span>
+            <span class="badge">Restoration-ready</span>
           </div>
         </div>
 
+        <div class="hero-media">
+          <img src="/images/hero.jpg" alt="Laser cleaning process" />
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="section-head">
+        <h2>Why laser cleaning</h2>
+        <p>Short & clear — customers understand instantly.</p>
+      </div>
+
+      <div class="cards">
+        <div class="card"><b>No media mess</b><p>No sand everywhere. Cleaner job site.</p></div>
+        <div class="card"><b>Controlled removal</b><p>Target rust/paint without heavy damage.</p></div>
+        <div class="card"><b>Mobile</b><p>We come to you around Tampa Bay.</p></div>
+        <div class="card"><b>Great for restoration</b><p>Perfect prep before paint/coating/weld.</p></div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="split">
         <div class="panel">
-          <div class="panel-inner">
-            <div class="mock" aria-label="preview">
-              <img class="big-logo" alt="LaserX Pro logo" src="logo.png" />
-            </div>
-
-            <div class="card-row">
-              <div class="mini"><b>Best for</b><p>Rust, paint, oxidation, carbon build-up</p></div>
-              <div class="mini"><b>Surfaces</b><p>Steel, stainless, cast, some aluminum*</p></div>
-              <div class="mini"><b>Ideal prep</b><p>Before powder coat / paint / welding</p></div>
-            </div>
-
-            <p style="margin:12px 0 0; color:rgba(168,180,214,.85); font-size:12px;">
-              *Aluminum wheels: we use safe settings to avoid surface damage.
-            </p>
-          </div>
+          <h2>See before/after</h2>
+          <p class="muted">Gallery page has all projects. Add more any time.</p>
+          <a class="btn primary" href="/gallery/">Open Gallery</a>
         </div>
-      </div>
-    </section>
-
-    <section class="section" id="services">
-      <div class="wrap">
-        <h2>Services</h2>
-        <p class="sub">Mobile laser cleaning for automotive, industrial, and restoration jobs. Clean, precise, and controllable.</p>
-
-        <div class="grid-3">
-          <div class="svc"><div class="ico">⚡</div><h3>Rust removal</h3><p>Remove rust without abrasive blasting media. Great for frames, chassis parts, tools, equipment.</p><div class="tag">Prep-ready finish</div></div>
-          <div class="svc"><div class="ico">🎨</div><h3>Paint & coating removal</h3><p>Strip paint, powder coat residue, and oxidation for refinishing and repairs.</p><div class="tag">Controlled cleaning</div></div>
-          <div class="svc"><div class="ico">🛠️</div><h3>Auto parts & wheels</h3><p>Wheels, hubs, brackets, manifolds, subframes — clean without the mess.</p><div class="tag">No dust / no sand</div></div>
-          <div class="svc"><div class="ico">🏭</div><h3>Industrial equipment</h3><p>Surface prep for maintenance: machinery parts, tooling, metal structures.</p><div class="tag">On-site service</div></div>
-          <div class="svc"><div class="ico">🧽</div><h3>Grease & carbon cleanup</h3><p>Remove carbon build-up, grime, and contaminants for assembly or repair work.</p><div class="tag">Detail-level</div></div>
-          <div class="svc"><div class="ico">📍</div><h3>Mobile jobs</h3><p>We come to you — Tampa, FL and beyond. Indoor-friendly and clean process.</p><div class="tag">Fast scheduling</div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="process">
-      <div class="wrap two-col">
-        <div class="steps">
-          <h2 style="margin:0 0 10px;">How it works</h2>
-          <p class="sub" style="margin:0 0 10px;">Simple process — send photos, get a quote, we clean on-site.</p>
-          <ol>
-            <li><b>Send photos</b> + describe the part, finish goal, and your location.</li>
-            <li><b>Quick quote</b> based on size/complexity and contamination level.</li>
-            <li><b>On-site setup</b> — clean, controlled, minimal mess.</li>
-            <li><b>Final inspection</b> — ready for coating/paint/welding or delivery.</li>
+        <div class="panel panel-dark">
+          <h2>How it works</h2>
+          <ol class="steps">
+            <li>Send a photo (text/email)</li>
+            <li>Get a quick quote</li>
+            <li>We clean on-site</li>
           </ol>
-          <div class="hero-actions" style="margin-top:14px">
-            <a class="btn primary" href="#contact">Request a quote</a>
-            <a class="btn" href="tel:+17276331826">Call now</a>
-          </div>
-        </div>
-
-        <div class="beforeafter" id="gallery">
-          <h2 style="margin:0 0 6px;">Before / After</h2>
-          <p class="sub" style="margin:0;">Drop your real photos later — placeholders are here now.</p>
-          <div class="ba-grid">
-            <div class="ph">Before photo<br><span style="opacity:.8">(wheel / frame / part)</span></div>
-            <div class="ph">After photo<br><span style="opacity:.8">(clean metal finish)</span></div>
-            <div class="ph">Before photo<br><span style="opacity:.8">(paint / rust)</span></div>
-            <div class="ph">After photo<br><span style="opacity:.8">(ready to coat)</span></div>
-          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <div class="wrap">
-        <div class="contact">
-          <h2 style="margin:0 0 10px;">Get a quote</h2>
-          <p class="sub" style="margin:0 0 16px;">Fast response. Send photos and tell us what finish you want.</p>
+    <section id="quote" class="container section">
+      <div class="section-head">
+        <h2>Get a quote</h2>
+        <p>Fastest way — call or text. Or send email with photos.</p>
+      </div>
 
-          <div class="contact-grid">
-            <form class="form" onsubmit="return sendMailto(event)">
-              <div class="field">
-                <label for="name">Name</label>
-                <input id="name" name="name" placeholder="Your name" required />
-              </div>
-              <div class="field">
-                <label for="phone">Phone</label>
-                <input id="phone" name="phone" placeholder="727-633-1826" />
-              </div>
-              <div class="field">
-                <label for="details">What needs cleaning?</label>
-                <textarea id="details" name="details" placeholder="Example: 4 wheels, rust removal, prep for powder coat. Location: Tampa. Photos link: ..."></textarea>
-              </div>
-              <button class="btn primary" type="submit">Send request</button>
-              <div class="small">This form opens your email app (no server needed).</div>
-            </form>
-
-            <div class="contact-info">
-              <b>LaserX Pro</b>
-              <p>Mobile laser metal cleaning — Tampa, FL and beyond.</p>
-              <ul class="list">
-                <li><span class="k">☎</span> <a href="tel:+17276331826">+1 (727) 633-1826</a></li>
-                <li><span class="k">✉</span> <a href="mailto:laserxpro25@gmail.com">laserxpro25@gmail.com</a></li>
-                <li><span class="k">⚡</span> No chemicals • No dust • Indoor-friendly</li>
-                <li><span class="k">📍</span> Tampa, Florida • mobile service</li>
-              </ul>
-
-              <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
-                <a class="btn" href="sms:+17276331826?&body=Hi%20LaserX%20Pro!%20I%20need%20a%20quote%20for%20laser%20cleaning.%20My%20item%3A%20_____%20Location%3A%20_____%20Photos%3A%20_____%0A">Text</a>
-                <a class="btn" href="mailto:laserxpro25@gmail.com?subject=Quote%20request%20-%20LaserX%20Pro">Email</a>
-              </div>
-
-              <p style="margin-top:12px" class="small">Tip: create a Google Drive / iCloud link with photos for faster quoting.</p>
-            </div>
-          </div>
-
-          <footer>
-            <div class="wrap foot">
-              <div>
-                <div style="display:flex; align-items:center; gap:10px;">
-                  <div class="logo" style="width:42px;height:42px;border-radius:14px">
-                    <img alt="LaserX Pro" src="logo.png" />
-                  </div>
-                  <div>
-                    <b>LaserX Pro</b>
-                    <div class="small">Laser Metal Cleaning • Tampa & beyond</div>
-                  </div>
-                </div>
-                <div class="small" style="margin-top:10px">
-                  © <span id="y"></span> LaserX Pro <span class="sep">•</span> <a href="tel:+17276331826">727-633-1826</a> <span class="sep">•</span> <a href="mailto:laserxpro25@gmail.com">laserxpro25@gmail.com</a>
-                </div>
-              </div>
-              <div class="small">
-                Built for fast loading. Hosted on GitHub Pages + Cloudflare DNS.
-              </div>
-            </div>
-          </footer>
-        </div>
+      <div class="quote">
+        <a class="btn primary" href="tel:+17276331826">Call (727) 633-1826</a>
+        <a class="btn" href="sms:+17276331826">Text photos</a>
+        <a class="btn" href="mailto:laserxpro25@gmail.com?subject=Laser%20Cleaning%20Quote&body=Hi!%20I%20need%20a%20quote.%0A%0ALocation:%0AWhat%20needs%20cleaning:%0APhotos%20link:%0A">Email quote request</a>
       </div>
     </section>
   </main>
 
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="y"></span> LaserXPro • Tampa Bay, FL</span>
+      <span class="muted">Powered by Netlify + Cloudflare</span>
+    </div>
+  </footer>
+
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-
-    function sendMailto(e){
-      e.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const details = document.getElementById("details").value.trim();
-
-      const subject = encodeURIComponent("Quote request — LaserX Pro");
-      const body = encodeURIComponent(
-        `Hi LaserX Pro,\n\n` +
-        `Name: ${name}\n` +
-        `Phone: ${phone}\n\n` +
-        `Details:\n${details}\n\n` +
-        `Thank you!`
-      );
-
-      window.location.href = `mailto:laserxpro25@gmail.com?subject=${subject}&body=${body}`;
-      return false;
-    }
+    document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
