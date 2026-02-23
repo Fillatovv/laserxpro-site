@@ -3,114 +3,204 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LaserXPro — Mobile Laser Cleaning (Tampa Bay)</title>
-  <meta name="description" content="Mobile laser cleaning in Tampa Bay. Rust, paint, grease removal for cars, equipment, brick, industrial surfaces. Call/Text for a fast quote." />
+  <title>LaserXPro — Mobile Laser Cleaning (Tampa Bay, FL)</title>
+  <meta name="description" content="Mobile laser cleaning in Tampa Bay: rust, paint, grease removal for cars, industrial parts, frames, tools, and more. Text photos, get a quote fast." />
   <link rel="stylesheet" href="/assets/style.css" />
-  <link rel="stylesheet" href="/assets/style.css">
 </head>
+
 <body>
-  <header class="top">
-    <div class="container topbar">
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="container topbar__inner">
       <a class="brand" href="/">
-  <img class="logo" src="/images/Logo.jpg" alt="LaserXPro logo">
-</a>
+        <img class="brand__logo" src="/logo.png" alt="LaserXPro logo">
+        <div class="brand__text">
+          <div class="brand__name">LaserXPro</div>
+          <div class="brand__tag">Mobile Laser Cleaning • Tampa Bay, FL</div>
+        </div>
       </a>
 
       <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#why">Why</a>
+        <a href="#how">How it works</a>
         <a href="/gallery/">Gallery</a>
-        <a href="#quote">Get Quote</a>
       </nav>
 
-      <div class="actions">
-        <a class="btn primary" href="tel:+17276331826">Call: (727) 633-1826</a>
-        <a class="btn" href="sms:+17276331826">Text</a>
+      <div class="topbar__cta">
+        <a class="btn btn--ghost" href="tel:+17276313826">Call</a>
+        <a class="btn btn--primary" href="#quote">Get a quote</a>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <h1>Rust. Paint. Grease — removed fast.</h1>
-          <p class="lead">Cars • Industrial equipment • Brick • Metal surfaces. Clean results, minimal mess. We come to you.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <div class="badge">Fast • Clean • On-site</div>
+        <h1>Rust. Paint. Grease — removed fast.</h1>
+        <p class="lead">
+          Mobile laser cleaning for <b>cars</b>, <b>industrial equipment</b>, <b>frames</b>, <b>tools</b>, <b>metal parts</b>, and more.
+          Clean results with minimal mess — we come to you.
+        </p>
 
-          <div class="hero-cta">
-            <a class="btn primary" href="tel:+17276331826">Call now</a>
-            <a class="btn" href="#quote">Get a quote</a>
-            <a class="btn ghost" href="/gallery/">See real work</a>
-          </div>
-
-          <div class="badges">
-            <span class="badge">Mobile service</span>
-            <span class="badge">Precision cleaning</span>
-            <span class="badge">Restoration-ready</span>
-          </div>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="sms:+17276313826?&body=Hi%20LaserXPro!%20I%20want%20a%20quote.%20Here%20are%20photos%20and%20details%3A%20">Text photos</a>
+          <a class="btn btn--ghost" href="/gallery/">See results</a>
         </div>
 
-        <div class="hero-media">
-          <img src="/images/hero.jpg" alt="Laser cleaning process" />
+        <div class="hero__meta">
+          <div class="pill">✅ Tampa • Clearwater • St. Pete • Largo</div>
+          <div class="pill">✅ Before paint / welding / coating prep</div>
+          <div class="pill">✅ Restoration-ready surface</div>
         </div>
       </div>
-    </section>
 
-    <section class="container section">
-      <div class="section-head">
+      <div class="hero__media">
+        <!-- Заменишь картинку, если хочешь: положи файл в /images/hero.jpg и поменяй путь -->
+        <div class="heroCard">
+          <div class="heroCard__top">
+            <div class="dot dot--r"></div>
+            <div class="dot dot--y"></div>
+            <div class="dot dot--g"></div>
+            <div class="heroCard__title">Real work • Real results</div>
+          </div>
+          <img class="heroCard__img" src="/images/works/hero.jpg" alt="Laser cleaning example">
+          <div class="heroCard__bottom">
+            <span class="tag">Rust removal</span>
+            <span class="tag">Paint removal</span>
+            <span class="tag">Grease cleanup</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glow"></div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="sectionHead">
+        <h2>What we clean</h2>
+        <p>Any metal. Any complexity. We focus on results and surface prep quality.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <h3>Automotive</h3>
+          <p>Frames, subframes, engine parts, brake shields, suspension parts, wheels.</p>
+        </div>
+        <div class="card">
+          <h3>Industrial</h3>
+          <p>Machinery parts, tools, brackets, equipment restoration and prep.</p>
+        </div>
+        <div class="card">
+          <h3>Restoration</h3>
+          <p>Controlled removal for classic cars, rare parts, delicate surfaces.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why -->
+  <section id="why" class="section section--dark">
+    <div class="container">
+      <div class="sectionHead">
         <h2>Why laser cleaning</h2>
-        <p>Short & clear — customers understand instantly.</p>
+        <p>Cleaner jobsite, controlled removal, less mess compared to blasting.</p>
       </div>
 
-      <div class="cards">
-        <div class="card"><b>No media mess</b><p>No sand everywhere. Cleaner job site.</p></div>
-        <div class="card"><b>Controlled removal</b><p>Target rust/paint without heavy damage.</p></div>
-        <div class="card"><b>Mobile</b><p>We come to you around Tampa Bay.</p></div>
-        <div class="card"><b>Great for restoration</b><p>Perfect prep before paint/coating/weld.</p></div>
-      </div>
-    </section>
-
-    <section class="container section">
-      <div class="split">
-        <div class="panel">
-          <h2>See before/after</h2>
-          <p class="muted">Gallery page has all projects. Add more any time.</p>
-          <a class="btn primary" href="/gallery/">Open Gallery</a>
+      <div class="grid2">
+        <div class="card card--soft">
+          <h3>Less mess</h3>
+          <p>No sand everywhere. Minimal cleanup.</p>
         </div>
-        <div class="panel panel-dark">
-          <h2>How it works</h2>
+        <div class="card card--soft">
+          <h3>Controlled removal</h3>
+          <p>Target rust/paint without heavy damage to the base metal.</p>
+        </div>
+        <div class="card card--soft">
+          <h3>Mobile service</h3>
+          <p>We come to you around Tampa Bay.</p>
+        </div>
+        <div class="card card--soft">
+          <h3>Perfect prep</h3>
+          <p>Great surface for paint, coating, welding, restoration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mini gallery -->
+  <section class="section">
+    <div class="container">
+      <div class="sectionHead sectionHead--row">
+        <div>
+          <h2>Before / after</h2>
+          <p>Quick examples — open full gallery for more.</p>
+        </div>
+        <a class="btn btn--ghost" href="/gallery/">Open full gallery</a>
+      </div>
+
+      <div class="thumbs">
+        <!-- Положи любые картинки сюда: /images/works/1.jpg ... -->
+        <a class="thumb" href="/gallery/"><img src="/images/works/1.jpg" alt="Work 1"></a>
+        <a class="thumb" href="/gallery/"><img src="/images/works/2.jpg" alt="Work 2"></a>
+        <a class="thumb" href="/gallery/"><img src="/images/works/3.jpg" alt="Work 3"></a>
+        <a class="thumb" href="/gallery/"><img src="/images/works/4.jpg" alt="Work 4"></a>
+        <a class="thumb" href="/gallery/"><img src="/images/works/5.jpg" alt="Work 5"></a>
+        <a class="thumb" href="/gallery/"><img src="/gallery/"><img src="/images/works/6.jpg" alt="Work 6"></a>
+      </div>
+
+      <div class="note">
+        Tip: JPEG отлично подходит. Названия делай простые: <b>1.jpg, 2.jpg...</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works + Quote -->
+  <section id="how" class="section section--dark">
+    <div class="container">
+      <div class="grid2">
+        <div>
+          <div class="sectionHead">
+            <h2>How it works</h2>
+          </div>
           <ol class="steps">
-            <li>Send a photo (text/email)</li>
-            <li>Get a quick quote</li>
-            <li>We clean on-site</li>
+            <li><b>Send photos</b> (text/email) + что нужно почистить.</li>
+            <li><b>Get quick quote</b> и примерный срок.</li>
+            <li><b>We clean on-site</b> — получаешь чистую поверхность под реставрацию.</li>
           </ol>
         </div>
-      </div>
-    </section>
 
-    <section id="quote" class="container section">
-      <div class="section-head">
-        <h2>Get a quote</h2>
-        <p>Fastest way — call or text. Or send email with photos.</p>
-      </div>
+        <div id="quote" class="card card--quote">
+          <h3>Get a quote fast</h3>
+          <p class="muted">Fastest way — send photos by text.</p>
 
-      <div class="quote">
-        <a class="btn primary" href="tel:+17276331826">Call (727) 633-1826</a>
-        <a class="btn" href="sms:+17276331826">Text photos</a>
-        <a class="btn" href="mailto:laserxpro25@gmail.com?subject=Laser%20Cleaning%20Quote&body=Hi!%20I%20need%20a%20quote.%0A%0ALocation:%0AWhat%20needs%20cleaning:%0APhotos%20link:%0A">Email quote request</a>
+          <div class="ctaBox">
+            <a class="btn btn--primary btn--full" href="sms:+17276313826?&body=Hi%20LaserXPro!%20I%20want%20a%20quote.%20Here%20are%20photos%20and%20details%3A%20">Text: (727) 631-3826</a>
+            <a class="btn btn--ghost btn--full" href="tel:+17276313826">Call now</a>
+          </div>
+
+          <div class="small muted">
+            © 2026 LaserXPro • Tampa Bay, FL
+          </div>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <span>© <span id="y"></span> LaserXPro • Tampa Bay, FL</span>
-      <span class="muted">Powered by Netlify + Cloudflare</span>
+    <div class="container footer__inner">
+      <div class="muted">LaserXPro — Mobile Laser Cleaning • Tampa Bay, FL</div>
+      <div class="footer__links">
+        <a href="/gallery/">Gallery</a>
+        <a href="tel:+17276313826">Call</a>
+        <a href="#quote">Quote</a>
+      </div>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
-
-
